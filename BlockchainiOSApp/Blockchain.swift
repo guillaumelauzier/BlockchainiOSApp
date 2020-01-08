@@ -193,16 +193,17 @@ extension String {
     }
 }
 
+/*
 let genesisBlock = Block()
 let blockchain = Blockchain(genesisBlock: genesisBlock)
 
-/*
+
  let transaction = Transaction(from: "Mary", to: "Steve", amount: 20)
  let block1 = Block()
  block1.addTransaction(transaction: transaction)
  block1.key
- */
-/*
+
+
 let transaction = Transaction(from: "Mary", to: "John", amount: 10, transactionType: .domestic)
 print("------------------------------------------------------")
 let block = blockchain.getNextBlock(transactions: [transaction])
@@ -213,4 +214,4 @@ let data = try! JSONEncoder().encode(blockchain)
 let blockchainJSON = String(data : data, encoding: .utf8)
 
 print(blockchainJSON!)
- */
+*/

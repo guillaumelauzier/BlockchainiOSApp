@@ -8,24 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		661BD7D223C3BFA400C2864E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661BD7D123C3BFA400C2864E /* AppDelegate.swift */; };
-		661BD7D423C3BFA400C2864E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661BD7D323C3BFA400C2864E /* ViewController.swift */; };
 		661BD7D723C3BFA400C2864E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 661BD7D523C3BFA400C2864E /* Main.storyboard */; };
 		661BD7D923C3BFA500C2864E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 661BD7D823C3BFA500C2864E /* Assets.xcassets */; };
 		661BD7DC23C3BFA500C2864E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 661BD7DA23C3BFA500C2864E /* LaunchScreen.storyboard */; };
 		661BD7E423C3C01900C2864E /* Blockchain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661BD7E323C3C01900C2864E /* Blockchain.swift */; };
 		661BD7E623C3C55E00C2864E /* TransactionHeader.png in Resources */ = {isa = PBXBuildFile; fileRef = 661BD7E523C3C55E00C2864E /* TransactionHeader.png */; };
+		66507B1523C6539D00F0BD0B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66507B1423C6539D00F0BD0B /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		661BD7CE23C3BFA400C2864E /* BlockchainiOSApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlockchainiOSApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		661BD7D123C3BFA400C2864E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		661BD7D323C3BFA400C2864E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		661BD7D623C3BFA400C2864E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		661BD7D823C3BFA500C2864E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		661BD7DB23C3BFA500C2864E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		661BD7DD23C3BFA500C2864E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		661BD7E323C3C01900C2864E /* Blockchain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blockchain.swift; sourceTree = "<group>"; };
 		661BD7E523C3C55E00C2864E /* TransactionHeader.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TransactionHeader.png; sourceTree = SOURCE_ROOT; };
+		66507B1423C6539D00F0BD0B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,13 +59,13 @@
 			isa = PBXGroup;
 			children = (
 				661BD7D123C3BFA400C2864E /* AppDelegate.swift */,
-				661BD7D323C3BFA400C2864E /* ViewController.swift */,
 				661BD7E323C3C01900C2864E /* Blockchain.swift */,
 				661BD7D523C3BFA400C2864E /* Main.storyboard */,
 				661BD7E523C3C55E00C2864E /* TransactionHeader.png */,
 				661BD7D823C3BFA500C2864E /* Assets.xcassets */,
 				661BD7DA23C3BFA500C2864E /* LaunchScreen.storyboard */,
 				661BD7DD23C3BFA500C2864E /* Info.plist */,
+				66507B1423C6539D00F0BD0B /* ViewController.swift */,
 			);
 			path = BlockchainiOSApp;
 			sourceTree = "<group>";
@@ -142,8 +142,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				661BD7D423C3BFA400C2864E /* ViewController.swift in Sources */,
 				661BD7D223C3BFA400C2864E /* AppDelegate.swift in Sources */,
+				66507B1523C6539D00F0BD0B /* ViewController.swift in Sources */,
 				661BD7E423C3C01900C2864E /* Blockchain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
