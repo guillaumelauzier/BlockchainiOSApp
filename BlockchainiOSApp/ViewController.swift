@@ -9,6 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var from: Transaction?
 
     @IBOutlet weak var providerForm: UITextField!
     
@@ -26,10 +28,15 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var progressBar: UIProgressView!
     
+    private let genesisBlock = Block()
+    private var blockchain : Blockchain!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.blockchain = Blockchain(genesisBlock: genesisBlock)
         // Do any additional setup after loading the view.
+        self.generateDummyTransactions()
     }
     
     @IBAction func sendFormData(_ sender: UIButton) {
@@ -42,14 +49,47 @@ class ViewController: UIViewController {
         dismiss(animated: true, completion: nil)
         */
         
-        let genesisBlock = Block()
-        let blockchain = Blockchain(genesisBlock: genesisBlock)
+        let amount = Double(amountSum!.text!) ?? 0.0
+        
+        var transType = TransactionType.international
+        switch domesticInternational.selectedSegmentIndex
+        {
+            case 0:
+                transType = TransactionType.domestic
+            case 1:
+                transType = TransactionType.international
+            default:
+                break
+        }
+        
+        if let from = providerForm!.text, let destinator = destinatorForm!.text{
+        
+            let transaction = Transaction(from: from, to: destinator, amount: amount, transactionType: transType)
+        
+            let blockx = Block()
+            blockx.addTransaction(transaction: transaction)
+        
+            self.blockchain.addBlock(blockx)
+        }
+    }
+    
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
+    func generateDummyTransactions() {
+        
         
         
         let transaction = Transaction(from: "Mary", to: "Steve", amount: 20.0, transactionType: TransactionType.domestic)
         let block1 = Block()
         block1.addTransaction(transaction: transaction)
-        block1.key
         
         
         let transaction2 = Transaction(from: "Mary", to: "John", amount: 10.0, transactionType: .domestic)
@@ -66,16 +106,7 @@ class ViewController: UIViewController {
         
         realTimeTextOutput.text = blockchainJSON
         
+        
+        
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
