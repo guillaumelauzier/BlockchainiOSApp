@@ -22,7 +22,13 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var domesticInternational: UISegmentedControl!
     
-    @IBOutlet weak var sendForm: UIButton!
+    @IBAction func onTapSendButton(_ sender: UIButton) {
+        self.generateDummyTransactions()
+        let str:String = "Mary"
+        self.providerForm.text = str
+        let str:String = "Bob"
+        self.destinatorForm.text = str
+    }
     
     @IBOutlet weak var realTimeTextOutput: UITextView!
     
@@ -33,10 +39,11 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        self.viewDidLoad()
         self.blockchain = Blockchain(genesisBlock: genesisBlock)
         // Do any additional setup after loading the view.
-        self.generateDummyTransactions()
+        
     }
     
     @IBAction func sendFormData(_ sender: UIButton) {
@@ -64,13 +71,15 @@ class ViewController: UIViewController {
         
         if let from = providerForm!.text, let destinator = destinatorForm!.text{
         
-            let transaction = Transaction(from: from, to: destinator, amount: amount, transactionType: transType)
+            let transaction2 = Transaction(from: from, to: destinator, amount: amount, transactionType: transType)
         
             let blockx = Block()
-            blockx.addTransaction(transaction: transaction)
+            blockx.addTransaction(transaction: transaction2)
         
             self.blockchain.addBlock(blockx)
+            
         }
+        
     }
     
     /*
@@ -85,14 +94,16 @@ class ViewController: UIViewController {
 
     func generateDummyTransactions() {
         
+        _ = self.providerForm
+        _ = self.destinatorForm
+        _ = self.amountSum
         
-        
-        let transaction = Transaction(from: "Mary", to: "Steve", amount: 20.0, transactionType: TransactionType.domestic)
+        let transaction = Transaction(from: "Mary", to: "Bob", amount: 20, transactionType: TransactionType.domestic)
         let block1 = Block()
         block1.addTransaction(transaction: transaction)
         
         
-        let transaction2 = Transaction(from: "Mary", to: "John", amount: 10.0, transactionType: .domestic)
+        let transaction2 = Transaction(from: "Phil", to: "Gab", amount: 10.0, transactionType: .domestic)
         block1.addTransaction(transaction: transaction2)
         print("------------------------------------------------------")
         let block = blockchain.getNextBlock(transactions: [transaction])
