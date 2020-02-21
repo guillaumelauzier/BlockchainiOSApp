@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Welcome View Controller-->
         <scene sceneID="yGH-id-3wm">
             <objects>
-                <viewController id="Pa9-Wk-Olv" sceneMemberID="viewController">
+                <viewController id="Pa9-Wk-Olv" customClass="WelcomeViewController" customModule="BlockchainiOSApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lan-s0-tfs">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -134,7 +134,6 @@
                                 </state>
                                 <connections>
                                     <action selector="onTapSendButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="70Z-4e-RqM"/>
-                                    <action selector="sendFormData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ouc-9k-F3u"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P92-Pa-Wvl">
@@ -155,7 +154,6 @@
                         <outlet property="minMaxAmount" destination="thq-fm-bRD" id="NEK-Ok-Zde"/>
                         <outlet property="providerForm" destination="pMm-Cv-HU1" id="Hfh-fY-Qez"/>
                         <outlet property="realTimeTextOutput" destination="7e2-N6-pJf" id="riB-EP-AGg"/>
-                        <outlet property="sendForm" destination="V94-8N-Msb" id="w9K-qO-23C"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -26,8 +26,8 @@ class ViewController: UIViewController {
         self.generateDummyTransactions()
         let str:String = "Mary"
         self.providerForm.text = str
-        let str:String = "Bob"
-        self.destinatorForm.text = str
+        let str2:String = "Bob"
+        self.destinatorForm.text = str2
     }
     
     @IBOutlet weak var realTimeTextOutput: UITextView!
@@ -40,7 +40,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.viewDidLoad()
+        // self.viewDidLoad()
         self.blockchain = Blockchain(genesisBlock: genesisBlock)
         // Do any additional setup after loading the view.
         
