@@ -16,18 +16,20 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var destinatorForm: UITextField!
     
-    @IBOutlet weak var minMaxAmount: UIStepper!
-    
     @IBOutlet weak var amountSum: UITextField!
     
     @IBOutlet weak var domesticInternational: UISegmentedControl!
     
     @IBAction func onTapSendButton(_ sender: UIButton) {
+        
         self.generateDummyTransactions()
         let str:String = "Mary"
         self.providerForm.text = str
         let str2:String = "Bob"
         self.destinatorForm.text = str2
+        //let int:Double = 20.0
+        //self.amountSum. = int
+        
     }
     
     @IBOutlet weak var realTimeTextOutput: UITextView!
@@ -39,22 +41,11 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // self.viewDidLoad()
         self.blockchain = Blockchain(genesisBlock: genesisBlock)
-        // Do any additional setup after loading the view.
         
     }
     
     @IBAction func sendFormData(_ sender: UIButton) {
-        
-        /*
-        realTimeTextOutput.text = "This is the value to be sent"
-        let Transaction =  (providerForm: from!.text!, destinatorForm: to!.text!, domesticInternational: fees.text!)
-        self.from!.providers.append(provider)
-        self.from!.tableView.reloadData()
-        dismiss(animated: true, completion: nil)
-        */
         
         let amount = Double(amountSum!.text!) ?? 0.0
         
@@ -81,16 +72,6 @@ class ViewController: UIViewController {
         }
         
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
     func generateDummyTransactions() {
         
@@ -101,7 +82,6 @@ class ViewController: UIViewController {
         let transaction = Transaction(from: "Mary", to: "Bob", amount: 20, transactionType: TransactionType.domestic)
         let block1 = Block()
         block1.addTransaction(transaction: transaction)
-        
         
         let transaction2 = Transaction(from: "Phil", to: "Gab", amount: 10.0, transactionType: .domestic)
         block1.addTransaction(transaction: transaction2)
@@ -116,8 +96,6 @@ class ViewController: UIViewController {
         print(blockchainJSON!)
         
         realTimeTextOutput.text = blockchainJSON
-        
-        
         
     }
 }
