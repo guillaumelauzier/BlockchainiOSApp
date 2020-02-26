@@ -1,6 +1,6 @@
 # BlockchainiOSApp
 
-<b>Educative iOS App on the Logic of Blockchain Technology.</b>
+<b>Basic Educative iOS App on the Logic of Blockchain Technology.</b>
 
 This is a simple application to understand how blockchain smart 
 contract transactions work in the backend with the JSON output:
